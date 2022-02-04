@@ -30,13 +30,13 @@ const Card = (item: {post: Post}) => {
     <CardView number={postValue.id}>
       <Title>{postValue.title}</Title>
       <Body>{postValue.body}</Body>
-      {show &&
-        postValue.comments?.map((comment: Comment) => (
-          <CommentView key={ Math.floor(100000 + Math.random() * 900000) + 'comments'}>
-            <Text>{comment.email}</Text>
-            <Text>{comment.name}</Text>
-            <Body>{comment.body}</Body>
-          </CommentView>
+        {show &&
+          postValue.comments?.map((comment: Comment) => (
+            <CommentView key={ Math.floor(100000 + Math.random() * 900000) + 'comments'}>
+              <Text>{comment.email}</Text>
+              <Text>{comment.name}</Text>
+              <Body>{comment.body}</Body>
+            </CommentView>
         ))}
         <InputView>
           <Input

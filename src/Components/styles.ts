@@ -50,7 +50,7 @@ export const InputView = styled(View)`
 export const Input= styled(TextInput)`
   padding-left: 10px;
   padding-right: 10px;
-  height: 30px;
+  height: 40px;
   display: flex;
   flex: 1;
   background-color: #efefef;
