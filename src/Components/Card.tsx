@@ -9,7 +9,7 @@ const Card = (item: {post: Post}) => {
   const [postValue, setPostValue] = useState<Post>(item.post)
   const [text, setText] = useState<Comment>({
     postId: postValue.id,
-    id: postValue.comments.length+1,
+    id: postValue.comments.length + 1,
     name: 'User logged',
     email: 'user_logged@gmail.com',
     body: ''
@@ -19,7 +19,7 @@ const Card = (item: {post: Post}) => {
     postValue.comments.push(text)
     setText({
       postId: postValue.id,
-      id: postValue.comments.length+1,
+      id: postValue.comments.length + 1,
       name: 'User logged',
       email: 'user_logged@gmail.com',
       body: ''
@@ -32,7 +32,7 @@ const Card = (item: {post: Post}) => {
       <Body>{postValue.body}</Body>
       {show &&
         postValue.comments?.map((comment: Comment) => (
-          <CommentView key={comment.id + 'comments'}>
+          <CommentView key={ Math.floor(100000 + Math.random() * 900000) + 'comments'}>
             <Text>{comment.email}</Text>
             <Text>{comment.name}</Text>
             <Body>{comment.body}</Body>
