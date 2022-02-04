@@ -1,5 +1,3 @@
-#### To start, **Docker** is required
-
 How to install and start
 
 - `git clone https://github.com/Gudaites/PostsList_RN`
