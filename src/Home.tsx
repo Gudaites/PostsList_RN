@@ -1,5 +1,5 @@
 import React, {useEffect, useCallback, useState} from 'react';
-import {SafeAreaView, Text, ScrollView} from 'react-native';
+import {SafeAreaView, FlatList} from 'react-native';
 import axios from 'axios';
 
 import Card from './Components/Card';
@@ -32,10 +32,11 @@ const App = () => {
 
   return (
     <SafeAreaView>
-      <ScrollView>
-        {posts &&
-          posts.map(post => <Card post={post} key={post.id + 'posts'} />)}
-      </ScrollView>
+      <FlatList
+        data={posts}
+        renderItem={({ item }) => <Card post={item} />}
+        keyExtractor={({id}) => id + 'key'}
+      />
     </SafeAreaView>
   );
 };

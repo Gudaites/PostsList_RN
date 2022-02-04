@@ -48,7 +48,8 @@ export const InputView = styled(View)`
 `;
 
 export const Input= styled(TextInput)`
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   height: 30px;
   display: flex;
   flex: 1;
